@@ -1,0 +1,14 @@
+C:\IAP\PAC#\Exemple\ClientProducts\bin\Debug\ClientProducts.exe.config
+C:\IAP\PAC#\Exemple\ClientProducts\bin\Debug\ClientProducts.exe
+C:\IAP\PAC#\Exemple\ClientProducts\bin\Debug\ClientProducts.pdb
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.csprojAssemblyReference.cache
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.Form1.resources
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.Properties.Resources.resources
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.csproj.GenerateResource.cache
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.csproj.CoreCompileInputs.cache
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.exe
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.pdb
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.Products.resources
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.Clients.resources
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.Completion.resources
+C:\IAP\PAC#\Exemple\ClientProducts\obj\Debug\ClientProducts.Comments.resources

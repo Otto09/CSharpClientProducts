@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="AddProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_prod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="availability" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="best_seller" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProductsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddClients">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_cl" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cod_prod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddClientsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_cm" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_cl" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rating" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="comment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCommentsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_prod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProductsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteClients">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_cl" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteClientsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_cm" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCommentsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateClients">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_cl" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateClientsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_prod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="availability" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="best_seller" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProductsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_cm" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_cl" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rating" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="comment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCommentsResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProducts" />
+  </wsdl:message>
+  <wsdl:message name="AddProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddClientsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddClients" />
+  </wsdl:message>
+  <wsdl:message name="AddClientsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddComments" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteProducts" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteClientsSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteClients" />
+  </wsdl:message>
+  <wsdl:message name="DeleteClientsSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteComments" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClientsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateClients" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClientsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProducts" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateComments" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCommentsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="AddProducts">
+      <wsdl:input message="tns:AddProductsSoapIn" />
+      <wsdl:output message="tns:AddProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddClients">
+      <wsdl:input message="tns:AddClientsSoapIn" />
+      <wsdl:output message="tns:AddClientsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComments">
+      <wsdl:input message="tns:AddCommentsSoapIn" />
+      <wsdl:output message="tns:AddCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProducts">
+      <wsdl:input message="tns:DeleteProductsSoapIn" />
+      <wsdl:output message="tns:DeleteProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClients">
+      <wsdl:input message="tns:DeleteClientsSoapIn" />
+      <wsdl:output message="tns:DeleteClientsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComments">
+      <wsdl:input message="tns:DeleteCommentsSoapIn" />
+      <wsdl:output message="tns:DeleteCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClients">
+      <wsdl:input message="tns:UpdateClientsSoapIn" />
+      <wsdl:output message="tns:UpdateClientsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProducts">
+      <wsdl:input message="tns:UpdateProductsSoapIn" />
+      <wsdl:output message="tns:UpdateProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComments">
+      <wsdl:input message="tns:UpdateCommentsSoapIn" />
+      <wsdl:output message="tns:UpdateCommentsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddProducts">
+      <soap:operation soapAction="http://tempuri.org/AddProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddClients">
+      <soap:operation soapAction="http://tempuri.org/AddClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComments">
+      <soap:operation soapAction="http://tempuri.org/AddComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProducts">
+      <soap:operation soapAction="http://tempuri.org/DeleteProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClients">
+      <soap:operation soapAction="http://tempuri.org/DeleteClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComments">
+      <soap:operation soapAction="http://tempuri.org/DeleteComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClients">
+      <soap:operation soapAction="http://tempuri.org/UpdateClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProducts">
+      <soap:operation soapAction="http://tempuri.org/UpdateProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComments">
+      <soap:operation soapAction="http://tempuri.org/UpdateComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddProducts">
+      <soap12:operation soapAction="http://tempuri.org/AddProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddClients">
+      <soap12:operation soapAction="http://tempuri.org/AddClients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComments">
+      <soap12:operation soapAction="http://tempuri.org/AddComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProducts">
+      <soap12:operation soapAction="http://tempuri.org/DeleteProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClients">
+      <soap12:operation soapAction="http://tempuri.org/DeleteClients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComments">
+      <soap12:operation soapAction="http://tempuri.org/DeleteComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClients">
+      <soap12:operation soapAction="http://tempuri.org/UpdateClients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProducts">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComments">
+      <soap12:operation soapAction="http://tempuri.org/UpdateComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44388/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44388/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
